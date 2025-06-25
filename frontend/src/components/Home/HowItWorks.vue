@@ -4,6 +4,7 @@
         <div class="card-container">
             <div class="card" v-for="(step, index) in steps" :key="index">
                 <div class="step-number">Step {{ index + 1 }}</div>
+                <component :is="step.icon" color="white" :size="45" />
                 <h3 class="step-title">{{ step.title }}</h3>
                 <p class="step-description">{{ step.description }}</p>
             </div>
@@ -12,19 +13,23 @@
 </template>
 
 <script lang="ts" setup>
+import { Users, Clock, CalendarCheck2 } from 'lucide-vue-next';
 const steps = [
     {
         title: "Collect Availability",
+        icon: Users,
         description:
             "SI leaders submit their weekly availability and course assignments through our simple form.",
     },
     {
         title: "Smart Algorithm",
+        icon: Clock,
         description:
             "Our algorithm automatically generates optimal schedules considering lecture times, availability, and spacing requirements.",
     },
     {
         title: "Review & Export",
+        icon: CalendarCheck2,
         description:
             "View generated schedules in calendar or table format, make adjustments, and export for distribution.",
     },
@@ -40,6 +45,10 @@ const steps = [
 h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+}
+
+h3 {
+    margin-top: 0.5rem;
 }
 
 .card-container {
@@ -68,6 +77,7 @@ h2 {
     color: #80bfff;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .step-title {
