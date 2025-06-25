@@ -9,5 +9,5 @@ Automatically generate optimized SI (Supplemental Instruction) session schedules
 
 #### Tech Stack
 - **Frontend:** Vue 3 + TypeScript + Vite
-- **Backend (planned):** Google Sheets API (Node or Firebase)
+- **Backend (planned):** ???
 - **Hosting:** Vercel
