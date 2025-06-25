@@ -5,7 +5,7 @@
 
     color-scheme: dark;
     color: rgba(230, 240, 255, 0.9);
-    background-color: #1e2430; /* deep slate blue-gray */
+    background-color: #1e2430;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -21,12 +21,12 @@ html {
 
 a {
     font-weight: 500;
-    color: #80bfff; /* soft sky blue */
+    color: #80bfff;
     text-decoration: none;
 }
 
 a:hover {
-    color: #a3cbff; /* brighter on hover */
+    color: #a3cbff;
 }
 
 body {
@@ -48,7 +48,7 @@ button {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #263043; /* muted navy */
+    background-color: #263043;
     color: #eaf4ff;
     cursor: pointer;
     transition: border-color 0.2s, background-color 0.2s;
