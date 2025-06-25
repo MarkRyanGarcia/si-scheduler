@@ -1,9 +1,9 @@
 <template>
-    <h1>About Page</h1>
+    <h1>Schedules Page</h1>
 </template>
 
 <script lang="ts">
 export default {
-    name: 'About',
+    name: 'Schedules',
 }
 </script>
