@@ -1,0 +1,13 @@
+
+a {
+    color: #80ffb3;
+}
+
+a:hover {
+    color: #a3ffcb;
+}
+
+nav {
+    background-color: #264330;
+    border-bottom: 1px solid #3a5b45;
+}
