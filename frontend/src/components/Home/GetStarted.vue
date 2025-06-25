@@ -19,4 +19,8 @@ function goToSchedule() {
     text-align: center;
     padding: 3rem 1rem;
 }
+
+h2 {
+    font-size: 2rem;
+}
 </style>
