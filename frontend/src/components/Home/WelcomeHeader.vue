@@ -17,6 +17,8 @@ function navigateToAbout() {
 
 <style scoped>
 .welcome {
+    margin-top: 2rem;
+    background-color: #3a455b;
     text-align: center;
     padding: 4rem 2rem;
 }
