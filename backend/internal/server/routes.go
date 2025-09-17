@@ -1,6 +1,7 @@
 package server
 
 import (
+	"backend/internal/drive"
 	"net/http"
 
 	"github.com/gin-contrib/cors"
@@ -18,6 +19,7 @@ func (s *Server) RegisterRoutes() http.Handler {
 	}))
 
 	r.GET("/", s.HelloWorldHandler)
+	r.GET("/responses", s.FormResponses)
 
 	return r
 }
@@ -27,4 +29,16 @@ func (s *Server) HelloWorldHandler(c *gin.Context) {
 	resp["message"] = "Hello World"
 
 	c.JSON(http.StatusOK, resp)
+}
+
+func (s *Server) FormResponses(c *gin.Context) {
+	data, err := drive.ReadSheetData()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": err.Error(),
+		})
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"responses": data,
+	})
 }
